@@ -1,0 +1,19 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+fr:
+
+  welcome: "<b>Bienvenue sur Swap!, le site pour troquer n'importe quoi avec votre propre réseau d'amis.</b><br/>Ce site essaye de construire votre réseau et marche par invitation<br/>"
+
+# login
+
+  email:          "Email"
+  password:       "Password"
+  log_in:         "Signer"
+  remember_me:    "Se souvenir"
+
+# menus
+  add_object:     "Ajouter un object"
+  logout:         "Déconnexion"
+
+
