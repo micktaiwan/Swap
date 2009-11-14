@@ -16,4 +16,11 @@ en:
   add_object:     "Add an object"
   logout:         "Logout"
 
+# objects
 
+  name:               "Name"
+  description:        "Description"
+  add:                "Add"
+  estimated_price:    "Estimated price"
+  buying_price:       "Buying price"
+  

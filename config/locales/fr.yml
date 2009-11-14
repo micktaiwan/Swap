@@ -7,18 +7,20 @@ fr:
 
 # login
 
-  email:          "Email"
-  password:       "Password"
-  log_in:         "Signer"
-  remember_me:    "Se souvenir"
+  email:              "Email"
+  password:           "Password"
+  log_in:             "Signer"
+  remember_me:        "Se souvenir"
 
 # menus
-  add_object:     "Ajouter un object"
-  logout:         "Déconnexion"
+  add_object:         "Ajouter un object"
+  logout:             "Déconnexion"
 
 # objects
 
-  name:           "Nom"
-  description:    "Description"
-  add:            "Ajouter"
-
+  name:               "Nom"
+  description:        "Description"
+  add:                "Ajouter"
+  estimated_price:    "Prix estimé"
+  buying_price:       "Prix à l'achat"
+  
