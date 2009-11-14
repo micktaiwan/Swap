@@ -1,0 +1,14 @@
+--- 
+javascripts: 
+- base: 
+  - prototype
+  - effects
+  - controls
+  - window
+  - scriptaculous
+  - application
+  - jquery
+stylesheets: 
+- base: 
+  - styles
+
