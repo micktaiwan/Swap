@@ -11,14 +11,23 @@
 	<link rel="Shortcut Icon" type="image/x-icon" href="/images/favicon.ico">	
 </head>
 <body>
+<div id="title">Swap!</div>
+<% if current_user %>
+<div id="menu">
+<%= link_to('Ajouter un object', :controller=>:objects, :action=>:new)%>
+<%= link_to('logout', :controller=>:sessions, :action=>:destroy)%>
+</div>
+<% end %>
+<div id="content">
 <!-- yield -->
-
+<% if flash[:error] %>
+<%= flash[:error] %><br/>
+<%end%>
 <%= yield %>
+</div>
 
 <!-- JS -->
-
 <%= javascript_include_merged :base %>
-</script>
 
 </body>
 </html>
