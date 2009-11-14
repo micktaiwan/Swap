@@ -12,14 +12,15 @@
 </head>
 <body>
 <div id="title">Swap!</div>
-<% if current_user %>
 <div id="menu">
-<%= link_to('Ajouter un object', :controller=>:objects, :action=>:new)%>
-<%= link_to('logout', :controller=>:sessions, :action=>:destroy)%>
-</div>
+<% if current_user %>
+<%= link_to(I18n.t(:add_object), :controller=>:objects, :action=>:new)%> | 
+<%= link_to(I18n.t(:logout), :controller=>:sessions, :action=>:destroy)%> |
 <% end %>
+<a href="/?locale=fr">Français</a> |
+<a href="/?locale=en">English</a>
+</div>
 <div id="content">
-<!-- yield -->
 <% if flash[:error] %>
 <%= flash[:error] %><br/>
 <%end%>

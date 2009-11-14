@@ -2,4 +2,18 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+
+  welcome: "<b>Welcome on Swap!, the site to swap anything with your own network.</b><br/>This site tries to build a network and works by invitation only.<br/>"
+
+# login
+
+  email:          "Email"
+  password:       "Password"
+  log_in:         "Log In"
+  remember_me:    "Remember me"
+
+# menus
+  add_object:     "Add an object"
+  logout:         "Logout"
+
+
