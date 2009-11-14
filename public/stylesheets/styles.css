@@ -39,4 +39,6 @@ a {
 a:visited {
   color:#00F;
 }
-
+input, textarea {
+  border: 1px solid #999;
+}

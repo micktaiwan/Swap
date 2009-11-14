@@ -16,4 +16,9 @@ fr:
   add_object:     "Ajouter un object"
   logout:         "Déconnexion"
 
+# objects
+
+  name:           "Nom"
+  description:    "Description"
+  add:            "Ajouter"
 
