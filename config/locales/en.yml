@@ -20,7 +20,9 @@ en:
 
   name:               "Name"
   description:        "Description"
+  swap_reason:        "Swap reason"
   add:                "Add"
-  estimated_price:    "Estimated price"
   buying_price:       "Buying price"
+  buying_date:        "Buying date"
+  estimated_price:    "Estimated price"
   

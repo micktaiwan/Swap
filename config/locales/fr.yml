@@ -20,7 +20,9 @@ fr:
 
   name:               "Nom"
   description:        "Description"
+  swap_reason:        "Raison du troc"
   add:                "Ajouter"
-  estimated_price:    "Prix estimé"
   buying_price:       "Prix à l'achat"
+  buying_date:        "Date d'achat"
+  estimated_price:    "Prix estimé"
   

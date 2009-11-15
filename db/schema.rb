@@ -9,7 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091114164656) do
+ActiveRecord::Schema.define(:version => 20091114214040) do
+
+  create_table "objects", :force => true do |t|
+    t.integer  "user_id",       :null => false
+    t.string   "name",          :null => false
+    t.string   "description"
+    t.string   "swap_reason"
+    t.integer  "cost"
+    t.integer  "buying_cost"
+    t.integer  "main_photo_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "login",                     :limit => 40
