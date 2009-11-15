@@ -1,6 +1,6 @@
-class CreateObjects < ActiveRecord::Migration
+class CreateThings < ActiveRecord::Migration
   def self.up
-    create_table :objects do |t|
+    create_table :things do |t|
       t.integer   :user_id, :null=>false
       t.string    :name, :null=>false
       t.string    :description
@@ -13,6 +13,6 @@ class CreateObjects < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :objects
+    drop_table :things
   end
 end
