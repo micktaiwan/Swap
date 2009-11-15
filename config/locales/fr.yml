@@ -4,7 +4,7 @@
 fr:
 
   welcome: "<b>Bienvenue sur Swap!, le site pour troquer n'importe quoi avec votre propre réseau d'amis.</b><br/>Ce site essaye de construire votre réseau et marche par invitation<br/>"
-  send_data:          "Send"
+  send_data:          "Envoyer"
 
 # login
 
@@ -14,10 +14,10 @@ fr:
   remember_me:        "Se souvenir"
 
 # menus
-  add_object:         "Ajouter un object"
+  add_thing:          "Ajouter un truc"
   logout:             "Déconnexion"
 
-# objects
+# things
 
   name:               "Nom"
   description:        "Description"
@@ -25,8 +25,16 @@ fr:
   buying_price:       "Prix à l'achat"
   buying_date:        "Date d'achat"
   estimated_price:    "Prix estimé"
-  edit_object:        "Edition"
+  edit_thing:         "Edition"
+  my_things:          "Mes trucs"
+  discount:           "de reduc"
+  all_things:         "Tous les trucs"
+  
+# profile
 
+  my_profile:         "Mon profile"
+  edit_my_profile:    "Editer"
+  
   
   activerecord:
     errors:

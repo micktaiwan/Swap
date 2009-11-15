@@ -1,4 +1,4 @@
-<h1><%=I18n.t(:edit_object)%></h1>
+<h1><%=I18n.t(:edit_thing)%></h1>
 
 <%= error_messages_for :thing %>
 <% form_for :@thing, :url=>{:action=>'update', :id=>@thing.id} do |f| -%>

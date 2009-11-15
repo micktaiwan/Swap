@@ -2,8 +2,6 @@ class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
   
-
-  # render new.rhtml
   def new
     @user = User.new
   end
@@ -25,4 +23,24 @@ class UsersController < ApplicationController
       render :action => 'new'
     end
   end
+  
+  def profile
+    @user = current_user
+  end
+
+  def edit
+    @user = current_user
+  end
+  
+  def update
+    @user = current_user
+    if @user.update_attributes(params[:user]) # do a save
+      redirect_back_or_default('/users/profile')
+      flash[:notice] = I18n.t(:edited_msg)
+    else
+      render :action => 'edit'
+    end
+  end
+  
 end
+

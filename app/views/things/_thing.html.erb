@@ -1,6 +1,9 @@
 <li>
+<% if thing.user_id == current_user.id %>
 <%= link_to('edit', {:action=>'edit', :id=>thing.id}) %>
-<%=thing.name%>
-(<%=thing.estimated_price%>)
+<% end %>
+<b><%=thing.name%></b>
+<%=thing.estimated_price%> (<%=thing.percent_off%>% <%=I18n.t(:discount)%>)
+<%=thing.user.name%>
 </li>
 

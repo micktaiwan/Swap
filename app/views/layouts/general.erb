@@ -14,7 +14,10 @@
 <div id="title">Swap!</div>
 <div id="menu">
 <% if current_user %>
-<%= link_to(I18n.t(:add_object), :controller=>:things, :action=>:new)%> | 
+<%= link_to(I18n.t(:all_things), :controller=>:things, :action=>:all)%> | 
+<%= link_to(I18n.t(:add_thing), :controller=>:things, :action=>:new)%> | 
+<%= link_to(I18n.t(:my_things), :controller=>:things, :action=>:my)%> | 
+<%= link_to(I18n.t(:my_profile), :controller=>:users, :action=>:profile)%> | 
 <%= link_to(I18n.t(:logout), :controller=>:sessions, :action=>:destroy)%> |
 <% end %>
 <a href="/?locale=fr">Français</a> |

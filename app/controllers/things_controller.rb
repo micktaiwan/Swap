@@ -1,6 +1,12 @@
 class ThingsController < ApplicationController
 
+  before_filter :verify_session
+
   def new
+  end
+  
+  def index
+    verify_session
   end
   
   def create
@@ -16,6 +22,7 @@ class ThingsController < ApplicationController
   end
 
   def edit
+    verify_owner
     @thing = Thing.find(params[:id])
   end
 
@@ -33,4 +40,25 @@ class ThingsController < ApplicationController
       render :action => 'edit'
     end
   end
+  
+  def all
+    @things = Thing.find(:all, :order=>"id desc")
+  end
+  
+  def permission_error
+    render(:text=>"Permission error")
+  end
+
+private
+  
+  def verify_owner
+    thing = Thing.find_by_id(params[:id])
+    redirect_to '/things/permission_error' if not thing or thing.user_id != current_user.id
+  end
+  
+  def verify_session
+    redirect_to "/session/new" and return if current_user == nil
+  end
+    
 end
+
