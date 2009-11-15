@@ -42,3 +42,9 @@ a:visited {
 input, textarea {
   border: 1px solid #999;
 }
+.errorExplanation {
+  border: 1px solid #999;
+  padding: 2px;
+  margin: 0px;
+  background: #FDD;
+}

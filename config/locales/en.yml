@@ -4,25 +4,46 @@
 en:
 
   welcome: "<b>Welcome on Swap!, the site to swap anything with your own network.</b><br/>This site tries to build a network and works by invitation only.<br/>"
+  send_data:          "Send"
 
 # login
 
-  email:          "Email"
-  password:       "Password"
-  log_in:         "Log In"
-  remember_me:    "Remember me"
+  email:              "Email"
+  password:           "Password"
+  log_in:             "Log In"
+  remember_me:        "Remember me"
 
 # menus
-  add_object:     "Add an object"
-  logout:         "Logout"
+  add_object:         "Add an object"
+  logout:             "Logout"
 
 # objects
 
   name:               "Name"
   description:        "Description"
   swap_reason:        "Swap reason"
-  add:                "Add"
   buying_price:       "Buying price"
   buying_date:        "Buying date"
   estimated_price:    "Estimated price"
+  edit_object:        "Edit object"
+
+  
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "can not be blank"
+              too_short: "is too short"
+              confirmation: "does not match the confirmation"
+            password_confirmation:
+              blank: "can not be blank"
+            email:
+              taken: "is already taken"
+              blank: "can not be blank"
+              too_short: "is too short"
+      template:
+        header: "Some errors occured"
+        body: "Please correct these errors."
   

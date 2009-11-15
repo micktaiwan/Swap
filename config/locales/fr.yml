@@ -4,6 +4,7 @@
 fr:
 
   welcome: "<b>Bienvenue sur Swap!, le site pour troquer n'importe quoi avec votre propre réseau d'amis.</b><br/>Ce site essaye de construire votre réseau et marche par invitation<br/>"
+  send_data:          "Send"
 
 # login
 
@@ -21,8 +22,32 @@ fr:
   name:               "Nom"
   description:        "Description"
   swap_reason:        "Raison du troc"
-  add:                "Ajouter"
   buying_price:       "Prix à l'achat"
   buying_date:        "Date d'achat"
   estimated_price:    "Prix estimé"
+  edit_object:        "Edition"
+
   
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "ne peut pas être vide"
+              too_short: "is too short"
+              confirmation: "does not match the confirmation"
+            password_confirmation:
+              blank: "can not be blank"
+            email:
+              taken: "is already taken"
+              blank: "ne peut pas être vide"
+              too_short: "is too short"
+        thing:
+          attributes:
+            name:
+              blank: "ne peut pas être vide"
+      template:
+        header: "Impossible de sauvegarder"
+        body: "Corrigez les erreurs ci dessous"
+    
