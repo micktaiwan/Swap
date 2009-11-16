@@ -19,11 +19,17 @@
 <%= link_to(I18n.t(:my_things), :controller=>:things, :action=>:my)%> | 
 <%= link_to(I18n.t(:my_profile), :controller=>:users, :action=>:profile)%> | 
 <%= link_to(I18n.t(:logout), :controller=>:sessions, :action=>:destroy)%> |
+<% else %>
+<%= link_to(I18n.t(:log_in), :controller=>:sessions, :action=>:new)%> |
+<%= link_to(I18n.t(:all_things), :controller=>:things, :action=>:all)%> |
 <% end %>
 <a href="/?locale=fr">Français</a> |
 <a href="/?locale=en">English</a>
 </div>
 <div id="content">
+<% if not current_user %>
+<p><%=I18n.t(:welcome)%></p>
+<% end %>
 <%= yield %>
 </div>
 
