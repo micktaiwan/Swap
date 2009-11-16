@@ -3,10 +3,10 @@ class ThingsController < ApplicationController
   before_filter :verify_session, :except=>[:index, :all]
 
   def new
-    redirect_to "/things/all"
   end
   
   def index
+    redirect_to "/things/all"
   end
   
   def create
