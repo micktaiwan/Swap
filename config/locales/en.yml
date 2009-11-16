@@ -37,7 +37,7 @@ en:
 
   my_profile:         "My profile"
   edit_my_profile:    "Edit"
-
+  location:           "Town, Country"
     
   activerecord:
     errors:
