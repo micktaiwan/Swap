@@ -3,11 +3,16 @@
 <b><%=thing.name%></b>
 <% if thing.user_id == current_user.id %>
 <%= link_to('edit', {:action=>'edit', :id=>thing.id}) %> |
-<%= link_to(I18n.t(:delete), {:action=>'destroy', :id=>thing.id}, {:confirm=>I18n.t(:delete_confirm)}) %><br/>
+<%= link_to(I18n.t(:delete), {:action=>'destroy', :id=>thing.id}, {:confirm=>I18n.t(:delete_confirm)}) %>
 <% end %>
+<br/>
 <%=thing.description%><br/>
 <%=thing.swap_reason%><br/>
-<%=thing.estimated_price%> (<%=thing.percent_off%>% <%=I18n.t(:discount)%>)<br/>
+<%=I18n.t(:value)%>: <%=thing.estimated_price%>
+<% if thing.buying_price.to_i != 0 %> 
+(<%=thing.percent_off%>% <%=I18n.t(:discount)%>)
+<% end %> 
+<br/>
 <%=thing.user.name%><br/>
 <br/>
 </li>

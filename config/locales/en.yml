@@ -24,13 +24,14 @@ en:
   swap_reason:        "Swap reason"
   buying_price:       "Buying price"
   buying_date:        "Buying date"
-  estimated_price:    "Estimated price"
+  estimated_price:    "Estimated price (value)"
   edit_thing:         "Edit thing"
   my_things:          "My things"
   discount:           "Off"
   all_things:         "All things"
   delete:             "delete"
   delete_confirm:     "This will delete this thing definitely"
+  value:              "Value"
   
 # profile
 

@@ -24,14 +24,14 @@ fr:
   swap_reason:        "Raison du troc"
   buying_price:       "Prix à l'achat"
   buying_date:        "Date d'achat"
-  estimated_price:    "Prix estimé"
+  estimated_price:    "Prix estimé (valeur)"
   edit_thing:         "Edition"
   my_things:          "Mes trucs"
   discount:           "de reduc"
   all_things:         "Tous les trucs"
   delete:             "supprimer"
   delete_confirm:     "Ce truc sera supprimé définitivement"
-
+  value:              "Valeur"
     
 # profile
 
