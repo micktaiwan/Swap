@@ -49,6 +49,15 @@ class ThingsController < ApplicationController
     render(:text=>"Permission error")
   end
 
+  def destroy
+    verify_owner
+    id = params[:id].to_i
+    if not Thing.destroy(id)
+      flash[:error] = I18n.t(:error)
+    end
+    redirect_to "/things/my"
+  end
+
 private
   
   def verify_owner

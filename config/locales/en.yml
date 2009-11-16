@@ -29,6 +29,8 @@ en:
   my_things:          "My things"
   discount:           "Off"
   all_things:         "All things"
+  delete:             "delete"
+  delete_confirm:     "This will delete this thing definitely"
   
 # profile
 

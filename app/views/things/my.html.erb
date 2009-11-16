@@ -1,4 +1,7 @@
 <h1><%=I18n.t(:my_things)%></h1>
+<% if flash[:error] %>
+<%= flash[:error] %><br/>
+<%end%>
 <ul class="things">
 <%= render(:partial=>'thing', :collection=>@things) %>
 </ul>

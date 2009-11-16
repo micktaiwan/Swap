@@ -29,7 +29,10 @@ fr:
   my_things:          "Mes trucs"
   discount:           "de reduc"
   all_things:         "Tous les trucs"
-  
+  delete:             "supprimer"
+  delete_confirm:     "Ce truc sera supprimé définitivement"
+
+    
 # profile
 
   my_profile:         "Mon profile"
