@@ -48,3 +48,11 @@ input, textarea {
   margin: 10px;
   background: #FDD;
 }
+.things {
+  list-style-image: none;
+  list-style-type: none;
+}
+.things img {
+  float:left;
+  margin: 0 10px 0 0;
+}

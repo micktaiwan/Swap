@@ -1,9 +1,14 @@
 <li>
+<img width="90" height="90">
+<b><%=thing.name%></b>
 <% if thing.user_id == current_user.id %>
 <%= link_to('edit', {:action=>'edit', :id=>thing.id}) %>
 <% end %>
-<b><%=thing.name%></b>
-<%=thing.estimated_price%> (<%=thing.percent_off%>% <%=I18n.t(:discount)%>)
-<%=thing.user.name%>
+<br/>
+<%=thing.description%><br/>
+<%=thing.swap_reason%><br/>
+<%=thing.estimated_price%> (<%=thing.percent_off%>% <%=I18n.t(:discount)%>)<br/>
+<%=thing.user.name%><br/>
+<br/>
 </li>
 
