@@ -4,8 +4,6 @@ javascripts:
   - prototype
   - effects
   - controls
-  - window
-  - scriptaculous
   - application
   - jquery
 stylesheets: 
