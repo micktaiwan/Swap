@@ -15,4 +15,7 @@
 <p><label>&nbsp;</label>
 <%= submit_tag I18n.t(:log_in) %></p>
 <% end -%>
+<% if flash[:error] %>
+<%= flash[:error] %><br/>
+<%end%>
 
