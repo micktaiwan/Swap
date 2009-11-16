@@ -6,7 +6,7 @@ class Thing < ActiveRecord::Base
   validates_presence_of :name
   
   def percent_off
-    if estimated_price and buying_price
+    if estimated_price and buying_price.to_i!=0
     100-((estimated_price.to_f / buying_price) * 100).to_i
     else
       0

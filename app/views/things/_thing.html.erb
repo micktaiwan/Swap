@@ -1,4 +1,4 @@
-<li>
+<li<% if thing.user_id == current_user.id %> class="mine"<% end %>>
 <img width="90" height="90">
 <b><%=thing.name%></b>
 <% if thing.user_id == current_user.id %>
