@@ -13,7 +13,7 @@
 (<%=thing.percent_off%>% <%=I18n.t(:discount)%>)
 <% end %> 
 <br/>
-<%=thing.user.name%> (<%=thing.user.location%>)<br/>
+<%=thing.user.name%><% if thing.user.location.to_s != '' %> (<%=thing.user.location%>)<%end%><br/>
 <br/>
 </li>
 
