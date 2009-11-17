@@ -1,5 +1,5 @@
 <li<% if current_user and thing.user_id == current_user.id %> class="mine"<% end %>>
-<img width="90" height="90">
+<img width="90" height="90" class="thing_img">
 <b><%=thing.name%></b>
 <% if current_user and thing.user_id == current_user.id %>
 <%= link_to('edit', {:action=>'edit', :id=>thing.id}) %> |

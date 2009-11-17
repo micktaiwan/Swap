@@ -64,3 +64,6 @@ input, textarea {
   background:  #AFA;
   padding: 0 2px 0 2px;
   }  
+.thing_img {
+  border: 1px solid #777;
+  }
