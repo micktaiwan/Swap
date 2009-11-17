@@ -1,18 +1,3 @@
-<script>
-  
-  function change_reminder(userid,value) {
-    new Ajax.Request('/myinfo/change_reminder/'+userid+'?v='+value, {
-      asynchronous:true,
-      evalScripts:true,
-      onComplete: function(r){
-        eval(r.responseText);
-        }
-      });
-    }
-        
-</script>
-
-
 <h2>Administration</h2>
 
 <div class="groupbox">
