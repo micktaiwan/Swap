@@ -1,0 +1,32 @@
+<script>
+  
+  function change_reminder(userid,value) {
+    new Ajax.Request('/myinfo/change_reminder/'+userid+'?v='+value, {
+      asynchronous:true,
+      evalScripts:true,
+      onComplete: function(r){
+        eval(r.responseText);
+        }
+      });
+    }
+        
+</script>
+
+
+<h2>Administration</h2>
+
+<div class="groupbox">
+<div id="title">Users:</div>
+<table>
+<tr style="font-weight:bold;">
+<td>Avatar</td>
+<td>Name</td>
+<td>last login</td>
+<td>things</td>
+<td>reminders</td>
+</tr>
+
+<%= render(:partial => 'user', :collection=>@users) %>
+</table>
+</div>
+

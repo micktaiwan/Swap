@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password
   layout 'general'
   before_filter :set_locale
-  #before_filter :log_action
+  before_filter :log_action
   include AuthenticatedSystem
   
   def set_locale
@@ -27,21 +27,33 @@ class ApplicationController < ActionController::Base
     #session[:locale] = I18n.locale = locale
   end
   
-  #def log_action
-  #  @action_log = ActionLog.new
-  #  # who is doing the activity?
-  #  @action_log.session_id = session.session_id #record the session
-  #  @action_log.browser = request.env['HTTP_USER_AGENT']
-  #  @action_log.ip = request.env['HTTP_X_FORWARDED_FOR'] || request.env['REMOTE_ADDR']
-  #  # what are they doing?
-  #  @action_log.controller        = controller_name
-  #  @action_log.action            = action_name
-  #  @action_log.controller_action = controller_name + "/" + action_name
-  #  @action_log.params            = params.inspect # wrap this in an unless block if it might contain a password
-  #  @action_log.user_id           = session[:user_id]
-  #  @action_log.company_id        = current_user.company_id if session[:user_id]
-  #  @action_log.save!
-  #end  
+  def log_action
+    @action_log = ActionLog.new
+    # who is doing the activity?
+    @action_log.session_id = session.session_id #record the session
+    @action_log.browser = request.env['HTTP_USER_AGENT']
+    @action_log.ip = request.env['HTTP_X_FORWARDED_FOR'] || request.env['REMOTE_ADDR']
+    # what are they doing?
+    @action_log.controller        = controller_name
+    @action_log.action            = action_name
+    @action_log.controller_action = controller_name + "/" + action_name
+    @action_log.params            = params.inspect # wrap this in an unless block if it might contain a password
+    @action_log.user_id           = current_user.id if current_user
+    @action_log.save!
+  end  
+  
+  def verify_admin_login
+    return if session['admin'] != nil
+
+    # change the pwd hash to suit your need
+    if params['l'] and Digest::SHA1.hexdigest(params['l']['l'])=='e81fe20d2df326dfbe5e6e3b592aa18929208c9b'
+      session['admin'] = 0
+      redirect_to :action=>:index
+    else
+      redirect_to "/a/login"
+    end
+
+  end
 
 end
 

@@ -59,3 +59,8 @@ input, textarea {
 .mine {
   color:#777;
   }
+.btnlnk {
+  border: 1px solid #595;
+  background:  #AFA;
+  padding: 0 2px 0 2px;
+  }  

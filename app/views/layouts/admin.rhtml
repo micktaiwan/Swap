@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<meta name="author" content="Mickael Faivre-Macon" />
+	<title>Swap</title>
+	<%= javascript_include_tag "prototype", "effects", "controls" %>
+	<style type="text/css" title="currentStyle" media="screen">
+		@import '/stylesheets/styles.css';
+	</style>
+	<link rel="Shortcut Icon" type="image/x-icon" href="/images/favicon.ico" />	
+</head>
+<body>
+<div id="container">
+<% cur = @controller.class.controller_path -%>
+<div id="menu">
+<a href="/">home</a> |
+<a href="/a">logins</a> |
+<a href="/action_logs">logs</a>
+</div>
+
+<div id="content">
+<%= @content_for_layout %>
+</div>
+<p>&nbsp;</p>
+
+</div>
+
+</body>
+</html>
