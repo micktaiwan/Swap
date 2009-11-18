@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091117190842) do
+ActiveRecord::Schema.define(:version => 20091118124412) do
 
   create_table "action_logs", :force => true do |t|
     t.string   "controller"
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(:version => 20091117190842) do
   end
 
   create_table "things", :force => true do |t|
-    t.integer  "user_id",         :null => false
-    t.string   "name",            :null => false
+    t.integer  "user_id",            :null => false
+    t.string   "name",               :null => false
     t.string   "description"
     t.string   "swap_reason"
     t.integer  "estimated_price"
@@ -35,6 +35,10 @@ ActiveRecord::Schema.define(:version => 20091117190842) do
     t.integer  "main_photo_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "users", :force => true do |t|
