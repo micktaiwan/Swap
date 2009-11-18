@@ -12,10 +12,14 @@ class ThingsController < ApplicationController
   def create
     @thing = Thing.new(params[:thing])
     @thing.user_id = current_user.id
-    @thing.save
-    if @thing.errors.empty?
-      redirect_back_or_default('/things/my')
-      flash[:notice] = I18n.t(:created_msg)
+      
+    if @thing.save
+      if params[:thing][:photo].blank?
+        flash[:notice] = I18n.t(:created_msg)
+        redirect_to('/things/my')
+      else
+        render :action => "crop"
+      end
     else
       render :action => 'new'
     end
@@ -34,12 +38,17 @@ class ThingsController < ApplicationController
     id = params[:id]
     @thing = Thing.find(id)
     if @thing.update_attributes(params[:thing]) # do a save
-      redirect_back_or_default('/things/my')
-      flash[:notice] = I18n.t(:edited_msg)
+      if params[:thing][:photo].blank?
+        flash[:notice] = I18n.t(:edited_msg)
+        redirect_back_or_default('/things/my')
+      else
+        render :action => "crop"
+      end
     else
       render :action => 'edit'
     end
   end
+  
   
   def all
     @things = Thing.find(:all, :order=>"id desc")
@@ -70,4 +79,5 @@ private
   end
     
 end
+
 
