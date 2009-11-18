@@ -7,8 +7,9 @@
 	<meta name="description" content="Swap anything">
 	<meta name="robots" content="all">
 	<title>Swap</title>
-  <%= stylesheet_link_merged :base %>
 	<link rel="Shortcut Icon" type="image/x-icon" href="/images/favicon.ico">	
+  <%= stylesheet_link_merged :base %>
+  <%= javascript_include_merged :base %>
 </head>
 <body>
 <div id="title">Swap!</div>
@@ -32,9 +33,5 @@
 <% end %>
 <%= yield %>
 </div>
-
-<!-- JS -->
-<%= javascript_include_merged :base %>
-
 </body>
 </html>

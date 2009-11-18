@@ -24,7 +24,7 @@ fr:
   swap_reason:        "Raison du troc"
   buying_price:       "Prix à l'achat"
   buying_date:        "Date d'achat"
-  estimated_price:    "Prix estimé (valeur)"
+  estimated_price:    "Valeur estimée"
   edit_thing:         "Edition"
   my_things:          "Mes trucs"
   discount:           "de reduc"

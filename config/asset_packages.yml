@@ -6,7 +6,9 @@ javascripts:
   - controls
   - application
   - jquery
+  - jquery.Jcrop
 stylesheets: 
 - base: 
   - styles
+  - jquery.Jcrop
 

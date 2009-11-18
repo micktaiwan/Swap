@@ -18,3 +18,9 @@
 
 <p><%= label_tag :photo %>
 <%= file_field :thing, :photo %></p>
+
+<% if thing and thing.photo_file_name %>
+<label>&nbsp;</label>
+<%= image_tag thing.photo.url(:small), :class=>"thing_img" %>  
+<% end %>
+

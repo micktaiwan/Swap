@@ -1,6 +1,3 @@
-<% content_for(:head) do %>
-<%= stylesheet_link_tag "jquery.Jcrop" %>
-<%= javascript_include_tag "jquery.Jcrop" %>
 <script type="text/javascript" charset="utf-8">
 $(function() {
   $('#cropbox').Jcrop({
@@ -27,7 +24,6 @@ function update_crop(coords) {
   $("#crop_h").val(Math.round(coords.h * ratio));
 }
 </script>
-<% end %>
 
 <%= image_tag @thing.photo.url(:large), :id => "cropbox" %>
 
@@ -36,7 +32,7 @@ function update_crop(coords) {
   <%= image_tag @thing.photo.url(:large), :id => "preview" %>
 </div>
 
-<% form_for @thing do |f| %>
+<% form_for @thing, :url=>{:action=>'update', :id=>@thing.id} do |f| %>
   <% for attribute in [:crop_x, :crop_y, :crop_w, :crop_h] %>
     <%= f.hidden_field attribute, :id => attribute %>
   <% end %>

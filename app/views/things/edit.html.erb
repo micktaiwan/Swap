@@ -1,8 +1,8 @@
 <h1><%=I18n.t(:edit_thing)%></h1>
 
 <%= error_messages_for :thing %>
-<% form_for :@thing, :url=>{:action=>'update', :id=>@thing.id} do |f| -%>
-  <%= render(:partial => f) %>
+<% form_for :@thing, :url=>{:action=>'update', :id=>@thing.id}, :html => { :multipart => true } do |f| -%>
+  <%= render(:partial => f, :locals=>{:thing=>@thing}) %>
   <p><label>&nbsp;</label>
   <%= submit_tag I18n.t(:send_data) %></p>
 <% end -%>

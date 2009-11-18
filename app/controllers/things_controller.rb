@@ -40,7 +40,7 @@ class ThingsController < ApplicationController
     if @thing.update_attributes(params[:thing]) # do a save
       if params[:thing][:photo].blank?
         flash[:notice] = I18n.t(:edited_msg)
-        redirect_back_or_default('/things/my')
+        redirect_to '/things/my'
       else
         render :action => "crop"
       end
@@ -48,7 +48,6 @@ class ThingsController < ApplicationController
       render :action => 'edit'
     end
   end
-  
   
   def all
     @things = Thing.find(:all, :order=>"id desc")

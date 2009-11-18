@@ -1,5 +1,11 @@
 <li<% if current_user and thing.user_id == current_user.id %> class="mine"<% end %>>
-<img width="90" height="90" class="thing_img">
+
+<% if not thing.photo_file_name %>
+<img width="100" height="100" class="thing_img">
+<% else %>
+<%= image_tag thing.photo.url(:small), :class=>"thing_img" %>  
+<% end %>
+
 <b><%=thing.name%></b>
 <% if current_user and thing.user_id == current_user.id %>
 <%= link_to('edit', {:action=>'edit', :id=>thing.id}) %> |
