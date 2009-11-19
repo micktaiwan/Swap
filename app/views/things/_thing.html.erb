@@ -7,6 +7,7 @@
 <% end %>
 
 <b><%=thing.name%></b>
+<%= link_to(I18n.t(:show_detail), {:action=>'show', :id=>thing.id}) %> |
 <% if current_user and thing.user_id == current_user.id %>
 <%= link_to('edit', {:action=>'edit', :id=>thing.id}) %> |
 <%= link_to(I18n.t(:delete), {:action=>'destroy', :id=>thing.id}, {:confirm=>I18n.t(:delete_confirm)}) %>

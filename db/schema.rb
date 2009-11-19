@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091118124412) do
+ActiveRecord::Schema.define(:version => 20091119120932) do
 
   create_table "action_logs", :force => true do |t|
     t.string   "controller"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(:version => 20091118124412) do
     t.string   "session_id"
     t.integer  "user_id"
     t.text     "params"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", :force => true do |t|
+    t.integer  "thing_id",   :null => false
+    t.integer  "user_id",    :null => false
+    t.text     "message",    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

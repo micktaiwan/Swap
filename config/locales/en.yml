@@ -32,6 +32,10 @@ en:
   delete:             "delete"
   delete_confirm:     "This will delete this thing definitely"
   value:              "Value"
+  show_detail:        "Show detail"
+  owner:              "Owner"
+  messages:           "Messages"
+  write_message:      "Leave a message"
   
 # profile
 

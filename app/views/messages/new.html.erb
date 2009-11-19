@@ -1,0 +1,9 @@
+<h1><%=I18n.t(:write_message)%></h1>
+
+<%= error_messages_for :message %>
+<% form_for :@message, :url=>{:action=>'create', :thing_id=>@id} do |f| -%>
+  <%= render(:partial => f) %>
+  <p><label>&nbsp;</label>
+  <%= submit_tag I18n.t(:send_data) %></p>
+<% end -%>
+

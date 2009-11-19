@@ -32,6 +32,11 @@ fr:
   delete:             "supprimer"
   delete_confirm:     "Ce truc sera supprimé définitivement"
   value:              "Valeur"
+  show_detail:        "Voir le détail"
+  owner:              "Propriétaire"
+  messages:           "Messages"
+  write_message:      "Laisser un message"
+
     
 # profile
 

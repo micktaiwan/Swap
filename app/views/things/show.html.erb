@@ -1,0 +1,32 @@
+<b><%=@thing.name%></b>
+<% if current_user and @thing.user_id == current_user.id %>
+<%= link_to('edit', {:action=>'edit', :id=>@thing.id}) %> |
+<%= link_to(I18n.t(:delete), {:action=>'destroy', :id=>@thing.id}, {:confirm=>I18n.t(:delete_confirm)}) %>
+<% end %>
+
+<br/>
+<br/>
+
+<% if @thing.photo_file_name %>
+<%= link_to(image_tag(@thing.photo.url(:small), :class=>"thing_img"), "") %>  
+<% end %>
+<br/>
+<br/>
+<%=@thing.description%><br/>
+<%=@thing.swap_reason%><br/>
+<br/>
+<%=I18n.t(:value)%>: <%=@thing.estimated_price.to_i%><br/>
+<% if @thing.buying_price.to_i != 0 %> 
+<%=I18n.t(:buying_price)%>: <%=@thing.buying_price.to_i%>
+(<%=@thing.percent_off%>% <%=I18n.t(:discount)%>)<br/>
+<% end %> 
+<br/>
+<b><%=I18n.t(:owner)%></b><br/>
+<br/>
+<%= render(:partial=>'users/detail', :object=>@thing.user) %>
+<br/>
+<b><%=I18n.t(:messages)%></b><br/>
+<%= link_to(I18n.t(:write_message), {:controller=>"messages", :action=>'new', :id=>@thing.id}) %><br/>
+<br/>
+<%= render(:partial=>"messages/show", :collection=>@thing.messages) %>
+
