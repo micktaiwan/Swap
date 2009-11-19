@@ -1,2 +1,8 @@
-<%=detail.name%>
-<% if detail.location.to_s != '' %> (<%=detail.location%>)<%end%><br/>
+<a href="http://www.gravatar.com/"><img align="left" src="http://www.gravatar.com/avatar.php?gravatar_id=<%=Digest::MD5.hexdigest(detail.email)%>" style="margin:3px;"></a>
+
+<%=detail.name%><br/>
+<% if detail.location.to_s != '' %><%=detail.location%><%end%><br/>
+<%=detail.things.size%> <%=I18n.t(:things)%><br/>
+<br/>
+<br/>
+

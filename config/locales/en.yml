@@ -36,12 +36,25 @@ en:
   owner:              "Owner"
   messages:           "Messages"
   write_message:      "Leave a message"
+  things:             "things"
+  estimated_price_explaination: "The value you put on it (if you had to sell it)"
   
 # profile
 
   my_profile:         "My profile"
   edit_my_profile:    "Edit"
   location:           "Town, Country"
+
+# messages
+
+  nb_messages:        "messages"
+  message:            "Message"
+  
+# network
+
+  network:            "Network"  
+  invite_friend:      "Invite a friend"
+  
     
   activerecord:
     errors:

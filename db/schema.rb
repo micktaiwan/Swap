@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091119120932) do
+ActiveRecord::Schema.define(:version => 20091119163937) do
 
   create_table "action_logs", :force => true do |t|
     t.string   "controller"
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(:version => 20091119120932) do
     t.integer  "thing_id",   :null => false
     t.integer  "user_id",    :null => false
     t.text     "message",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "networks", :id => false, :force => true do |t|
+    t.integer  "user_id",    :null => false
+    t.integer  "friend_id",  :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -54,6 +54,10 @@ class ApplicationController < ActionController::Base
     end
 
   end
+  
+  def verify_session
+    redirect_to "/session/new" and return if current_user == nil
+  end
 
 end
 

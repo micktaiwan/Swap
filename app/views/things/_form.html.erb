@@ -14,7 +14,9 @@
 <%= text_field :thing, :buying_date, :size=>8 %></p>
 
 <p><%= label_tag I18n.t(:estimated_price) %>
-<%= text_field :thing, :estimated_price, :size=>5 %></p>
+<%= text_field :thing, :estimated_price, :size=>5 %>
+<%= I18n.t(:estimated_price_explaination) %>
+</p>
 
 <p><%= label_tag :photo %>
 <%= file_field :thing, :photo %></p>

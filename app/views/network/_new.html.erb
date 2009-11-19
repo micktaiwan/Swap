@@ -1,0 +1,20 @@
+<h1><%=I18n.t(:invite_friend)%></h1>
+
+<%= link_to_remote('qsd',:url=>{:action=>'create'},  :loading=>"$('#msg').html('sending...')", :update=>"msg") %>
+
+<p><%= label_tag I18n.t(:name) %>
+<%= text_field :friend, :name %></p>
+
+<p><%= label_tag I18n.t(:email) %>
+<%= text_field :friend, :email %></p>
+
+<p><%= label_tag I18n.t(:message) %>
+<%= text_area :friend, :message, :rows=>4 %></p>
+
+<p><label>&nbsp;</label>
+<%= submit_tag I18n.t(:send_data) %></p>
+
+</form>
+
+<div id="msg"></div>
+

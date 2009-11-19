@@ -36,7 +36,8 @@ fr:
   owner:              "Propriétaire"
   messages:           "Messages"
   write_message:      "Laisser un message"
-
+  things:             "trucs"
+  estimated_price_explaination: "La valeur que vous lui donnez (si vous deviez le vendre)"
     
 # profile
 
@@ -44,6 +45,16 @@ fr:
   edit_my_profile:    "Editer"
   location:           "Ville, Pays"
   
+# messages
+
+  nb_messages:        "messages"
+  message:            "Message"
+  
+# network
+
+  network:            "Réseau"  
+  invite_friend:      "Inviter un ami"
+    
   activerecord:
     errors:
       models:

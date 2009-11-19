@@ -1,12 +1,11 @@
 --- 
 javascripts: 
 - base: 
-  - prototype
-  - effects
-  - controls
-  - application
   - jquery
   - jquery.Jcrop
+  - jquery-ui
+  - jrails
+  - application
 stylesheets: 
 - base: 
   - styles
