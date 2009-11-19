@@ -58,6 +58,10 @@ class ApplicationController < ActionController::Base
   def verify_session
     redirect_to "/session/new" and return if current_user == nil
   end
+  
+  def generate_pwd
+    str = ''; 6.times { str += (rand(26)+65).chr }; str
+  end
 
 end
 

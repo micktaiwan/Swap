@@ -54,6 +54,8 @@ fr:
 
   network:            "Réseau"  
   invite_friend:      "Inviter un ami"
+  already_member:     "{{name}} has been added in your network"
+  sent_to:            "Email sent to {{name}}"
     
   activerecord:
     errors:

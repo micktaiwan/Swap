@@ -4,7 +4,6 @@ javascripts:
   - jquery
   - jquery.Jcrop
   - jquery-ui
-  - jrails
   - application
 stylesheets: 
 - base: 

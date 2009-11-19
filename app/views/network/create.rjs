@@ -1,0 +1,7 @@
+if @exists
+  page['#msg'].html(I18n.t(:already_member, :name=>@name))
+else
+  page['#msg'].html(I18n.t(:sent_to, :name=>@name))
+end
+page << "$('#msg').fadeOut(10000);"
+
