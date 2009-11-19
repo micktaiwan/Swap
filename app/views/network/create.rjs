@@ -3,5 +3,5 @@ if @exists
 else
   page['#msg'].html(I18n.t(:sent_to, :name=>@name))
 end
-page << "$('#msg').fadeOut(10000);"
+page << "$('#msg').fadeOut(5000);"
 
