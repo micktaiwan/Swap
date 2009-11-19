@@ -18,8 +18,9 @@ class SessionsController < ApplicationController
       self.current_user = user
       new_cookie_flag = (params[:remember_me] == "1")
       handle_remember_cookie! new_cookie_flag
-      redirect_back_or_default('/things/all')
+      AppMailer.deliver_alert("login","#{current_user.name} logged in on Swap!")
       flash[:notice] = "Logged in successfully"
+      redirect_back_or_default('/things/all')
     else
       note_failed_signin
       @login       = params[:login]

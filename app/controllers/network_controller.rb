@@ -18,7 +18,11 @@ class NetworkController < ApplicationController
     if not @friend
       @exists = false
       pwd = generate_pwd
-      @friend = User.create(:name=>@name, :email=>@email, :password=>pwd, :password_confirmation=>pwd)
+      @friend = User.new(:name=>@name, :email=>@email, :password=>pwd, :password_confirmation=>pwd)
+      if not @friend.save
+        render(:text=>"$('#msg').html('');alert('#{@friend.errors.full_messages*'\n'}')")
+        return
+      end
       AppMailer.deliver_invitation(current_user, @friend, @msg, pwd)
     end
     # TODO sent an alert if friend already exist
