@@ -6,22 +6,13 @@ h1        { background: #FAB; font-size: 1.2em; padding: 3px; margin: 0 0 0 -10p
 label     { width: 120px; float: left; text-align: right; margin-right: 4px; display: block }
 a         { text-decoration: none; color:#00F; }
 a:visited { color:#00F; }
-input, textarea {
-  border: 1px solid #999;
-}
+img { border: 1px solid #444; }
+input, textarea { border: 1px solid #999; }
 .errorExplanation {
   border: 1px solid #333;
   padding: 10px;
   margin: 10px;
   background: #FDD;
-}
-.things {
-  list-style-image: none;
-  list-style-type: none;
-}
-.things img {
-  float:left;
-  margin: 0 10px 0 0;
 }
 .mine {
   color:#777;
@@ -46,12 +37,18 @@ input, textarea {
   color:#DDD;
   }
 
-img {
-  border: 1px solid #444;
-}
 .friend img {
   text-align: center;
   }
+
+.things {
+  list-style-image: none;
+  list-style-type: none;
+}
+.things img {
+  float:left;
+  margin: 0 10px 0 0;
+}
 
 .thing {
   margin: 10px;

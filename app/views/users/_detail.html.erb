@@ -1,11 +1,10 @@
 <div class="friend">
 <div class="name_img">
-<a href="http://www.gravatar.com/"><img src="http://www.gravatar.com/avatar.php?gravatar_id=<%=Digest::MD5.hexdigest(detail.email)%>" style="margin:3px;"></a>
+<a title="<%=detail.name%>" href="http://www.gravatar.com/"><img src="http://www.gravatar.com/avatar.php?gravatar_id=<%=Digest::MD5.hexdigest(detail.email)%>" style="margin:3px;"></a>
 <div class="name">
-<%=detail.name%><br/>
+<%=detail.name.split(" ")[0]%><br/>
 <%=detail.things.size%> <%=I18n.t(:things)%>
 </div>
-
 </div>
 
 <div class="add">
@@ -19,4 +18,5 @@
 </div>
 
 </div>
+
 

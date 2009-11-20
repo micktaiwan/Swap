@@ -10,11 +10,11 @@ class User < ActiveRecord::Base
   #has_many :friends, :through=>:networks, :foreign_key=>:friend_id, :class_name=>'User' #, :select => "memberships.active, projects.*"
 
   def friends # I dont' understand associations well enough....
-    User.find_by_sql("select * from users join networks on networks.user_id='#{self.id}' where users.id=networks.friend_id")
+    User.find_by_sql("select * from users join networks on networks.user_id='#{self.id}' where users.id=networks.friend_id order by id desc")
   end
 
   def fans # I dont' understand associations well enough....
-    User.find_by_sql("select * from users join networks on networks.friend_id='#{self.id}' where users.id=networks.user_id")
+    User.find_by_sql("select * from users join networks on networks.friend_id='#{self.id}' where users.id=networks.user_id order by id desc")
   end
   
   def friend_of?(user_id)
