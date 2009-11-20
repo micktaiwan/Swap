@@ -4,3 +4,9 @@
 
 <%= render(:partial=>'detail', :object=>@user) %>
 
+<div class="location">
+<br/>
+<% if detail.location.to_s != '' %><%=detail.location%><%end%><br/>
+</div>
+
+
