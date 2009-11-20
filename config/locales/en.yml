@@ -56,6 +56,11 @@ en:
   invite_friend:      "Invite a friend"
   already_member:     "{{name}} is a member and has been added in your network"
   sent_to:            "An email has been sent to {{name}}"
+  friends:            "Friends"
+  fans:               "Fans"
+  add_as_friend:      "Add as friend"
+  remove_friend:      "Remove this friend"
+  already_your_friend: "{{name}} is already your friend ({{name_in_db}})"
     
   activerecord:
     errors:

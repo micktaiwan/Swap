@@ -6,6 +6,25 @@ class User < ActiveRecord::Base
   include Authentication::ByCookieToken
   
   has_many :things
+  #has_many :networks
+  #has_many :friends, :through=>:networks, :foreign_key=>:friend_id, :class_name=>'User' #, :select => "memberships.active, projects.*"
+
+  def friends # I dont' understand associations well enough....
+    User.find_by_sql("select * from users join networks on networks.user_id='#{self.id}' where users.id=networks.friend_id")
+  end
+
+  def fans # I dont' understand associations well enough....
+    User.find_by_sql("select * from users join networks on networks.friend_id='#{self.id}' where users.id=networks.user_id")
+  end
+  
+  def friend_of?(user_id)
+    Network.find_by_sql("select * from networks where user_id='#{user_id}' and friend_id='#{self.id}'") == [] ? false : true
+  end
+
+  def has_friend?(user_id)
+    Network.find_by_sql("select * from networks where user_id='#{self.id}' and friend_id='#{user_id}'") == [] ? false : true
+  end
+  
 
   #validates_presence_of     :login
   #validates_length_of       :login,    :within => 3..40

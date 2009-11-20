@@ -1,4 +1,8 @@
 <%= render(:partial=>'new') %>
 <br/>
 <h1><%= I18n.t(:network) %></h1>
-à faire....
+<h2><%= I18n.t(:friends) %></h2>
+<%= render(:partial=>'users/detail', :collection=>@friends) %>
+
+<h2><%= I18n.t(:fans) %></h2>
+<%= render(:partial=>'users/detail', :collection=>@fans) %>

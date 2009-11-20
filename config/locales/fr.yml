@@ -56,7 +56,13 @@ fr:
   invite_friend:      "Inviter un ami"
   already_member:     "{{name}} has been added in your network"
   sent_to:            "Email sent to {{name}}"
-    
+  friends:            "Amis"
+  fans:               "Fans"
+  add_as_friend:      "Ajouter comme ami"
+  remove_friend:      "Retirer cet ami"
+  already_your_friend: "{{name}} est déjà votre ami ({{name_in_db}})"
+  
+      
   activerecord:
     errors:
       models:
