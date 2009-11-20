@@ -16,7 +16,7 @@ class AppMailer < ActionMailer::Base
     @body["msg"] = msg
     @body["pwd"] = pwd
     @recipients = user.email
-    @from       = "\"#{from.name}\" <#{from.email}>"
+    @from       = from.email
     @sent_on    = Time.now
     @headers    = {}
     content_type "text/html"
