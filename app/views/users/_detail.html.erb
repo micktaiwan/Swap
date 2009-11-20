@@ -1,17 +1,26 @@
-<a href="http://www.gravatar.com/"><img align="left" src="http://www.gravatar.com/avatar.php?gravatar_id=<%=Digest::MD5.hexdigest(detail.email)%>" style="margin:3px;"></a>
+<div class="friend">
+<div class="name_img">
+<a href="http://www.gravatar.com/"><img src="http://www.gravatar.com/avatar.php?gravatar_id=<%=Digest::MD5.hexdigest(detail.email)%>" style="margin:3px;"></a>
+<div class="name">
+<%=detail.name%><br/>
+<%=detail.things.size%> <%=I18n.t(:things)%>
+</div>
 
-<%=detail.name%>
+</div>
+
+<div class="add">
 <% if detail!=current_user %>
 <% if not detail.friend_of?(current_user.id) %>
 <%= link_to(I18n.t(:add_as_friend), :controller=>:network, :action=>:add_as_friend, :id=>detail.id)%>
 <% else %>
 <%#= link_to(I18n.t(:remove_friend), :controller=>:network, :action=>:remove_friend, :id=>detail.id)%>
 <%end%>
-<%end%><br/>
-<br/>
+<%end%>
+</div>
 
+<div class="location">
 <% if detail.location.to_s != '' %><%=detail.location%><%end%><br/>
-<%=detail.things.size%> <%=I18n.t(:things)%><br/>
-<br/>
-<br/>
+</div>
+
+</div>
 
