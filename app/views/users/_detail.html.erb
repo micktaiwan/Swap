@@ -7,7 +7,7 @@
 </div>
 </div>
 
-<div class="add">
+<div class="add_as_friend">
 <% if detail!=current_user %>
 <% if not detail.friend_of?(current_user.id) %>
 <%= link_to(I18n.t(:add_as_friend), :controller=>:network, :action=>:add_as_friend, :id=>detail.id)%>

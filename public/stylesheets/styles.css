@@ -2,8 +2,8 @@ body      { font-family: sans; padding: 0px; margin: 0px; }
 #title    { background: #BCE; font-size: 3em; letter-spacing: -6px; padding: 0 0 0 10px; }
 #menu     { padding: 3px 3px 3px 10px; margin: 0; background: #8AF; }
 #content  { padding: 0px 0 0 10px; }
-h1        { background: #FAB; font-size: 1.2em; padding: 3px; margin: 0 0 0 -10px; padding: 0 0 0 10px; }
-h2        { background: #ABC; font-size: 1.2em; padding: 3px; margin: 0 0 0 -10px; padding: 0 0 0 10px; }
+h1        { background: #F90; font-size: 1.2em; padding: 3px; margin: 0 0 0 -10px; padding: 0 0 0 10px; }
+h2        { background: #DDD; font-size: 1.2em; padding: 3px; margin: 0 0 0 -10px; padding: 0 0 0 10px; }
 label     { width: 120px; float: left; text-align: right; margin-right: 4px; display: block }
 a         { text-decoration: none; color:#00F; }
 a:visited { color:#00F; }
@@ -72,3 +72,6 @@ input, textarea { border: 1px solid #999; }
   font-weight: bold;
 }
 
+.add_as_friend {
+  display: inline;
+  }

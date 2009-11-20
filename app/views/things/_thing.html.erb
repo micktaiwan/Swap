@@ -25,6 +25,15 @@
 <br/>
 <div class="user"><%=thing.user.name%></div>
 <% if thing.user.location.to_s != '' %> (<%=thing.user.location%>)<%end%>
+
+<div class="add_as_friend">
+<% if current_user and thing.user!=current_user %>
+<% if not thing.user.friend_of?(current_user.id) %>
+<%= link_to(I18n.t(:add_as_friend), :controller=>:network, :action=>:add_as_friend, :id=>thing.user.id)%>
+<%end%>
+<%end%>
+</div>
+
 <br/>
 <br/>
 </li>
