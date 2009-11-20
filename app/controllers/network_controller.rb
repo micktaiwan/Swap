@@ -48,6 +48,13 @@ class NetworkController < ApplicationController
     redirect_to "/network/index"    
   end
 
-  
+  def resend_invite
+    pwd = generate_pwd
+    @friend = User.find(params[:id])
+    @friend.update_attributes(:password=>pwd, :password_confirmation=>pwd) # risky business
+    AppMailer.deliver_invitation(current_user, @friend, "", pwd)
+    render(:text=>"ok")
+  end
+ 
 end
 
