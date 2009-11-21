@@ -7,7 +7,7 @@
 <% end %>
 
 <div class="name"><%=thing.name%></div>
-<%= link_to(I18n.t(:show_detail), {:action=>'show', :id=>thing.id}) %> | 
+<%= link_to(I18n.t(:show_detail), {:controller=>'things', :action=>'show', :id=>thing.id}) %> | 
 <%= thing.messages.size %> <%= I18n.t(:nb_messages) %>
 
 <% if current_user and thing.user_id == current_user.id %>
