@@ -16,6 +16,8 @@ class SessionsController < ApplicationController
       # button. Uncomment if you understand the tradeoffs.
       # reset_session
       self.current_user = user
+      user.last_login = Time.now # set after the session so we keep the last time login
+      user.save
       new_cookie_flag = (params[:remember_me] == "1")
       handle_remember_cookie! new_cookie_flag
       AppMailer.deliver_alert("login","#{current_user.name} logged in on Swap!")
