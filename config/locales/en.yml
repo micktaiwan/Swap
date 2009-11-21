@@ -10,6 +10,7 @@ en:
 
   email:              "Email"
   password:           "Password"
+  password_confirmation: "Confirmation"
   log_in:             "Log In"
   remember_me:        "Remember me"
 

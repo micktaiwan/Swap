@@ -9,6 +9,12 @@
   <p><%= label_tag I18n.t(:location) %>
   <%= text_field :user, :location %></p>
     
+  <p><%= label_tag I18n.t(:password) %>
+  <%= password_field :user, :password %></p>
+
+  <p><%= label_tag I18n.t(:password_confirmation) %>
+  <%= password_field :user, :password_confirmation %></p>
+
   <p><label>&nbsp;</label>
   <%= submit_tag I18n.t(:send_data) %></p>
 <% end -%>

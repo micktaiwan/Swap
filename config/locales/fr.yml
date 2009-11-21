@@ -9,7 +9,8 @@ fr:
 # login
 
   email:              "Email"
-  password:           "Password"
+  password:           "Mot de passe"
+  password_confirmation: "Confirmation"
   log_in:             "Signer"
   remember_me:        "Se souvenir"
 
