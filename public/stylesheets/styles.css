@@ -29,6 +29,7 @@ input, textarea { border: 1px solid #999; }
 }
 .friend .name {
   text-align: center;
+  background: #555;
   }
 
 .friend .name_img {
@@ -71,7 +72,20 @@ input, textarea { border: 1px solid #999; }
   padding: 2px;
   font-weight: bold;
 }
+.thing .user a {
+  color:#55D;
+  }
+
+.name a {
+  color:#99F;
+  }
 
 .add_as_friend {
   display: inline;
   }
+  
+.time {
+  font-weight: bold;
+  font-size: 0.8em;
+  }
+

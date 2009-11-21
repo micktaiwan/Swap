@@ -38,11 +38,12 @@ fr:
   messages:           "Messages"
   write_message:      "Laisser un message"
   things:             "trucs"
+  title_things:       "Trucs"
   estimated_price_explaination: "La valeur que vous lui donnez (si vous deviez le vendre)"
     
 # profile
 
-  my_profile:         "Mon profil"
+  profile:            "Profil"
   edit_my_profile:    "Editer"
   location:           "Ville, Pays"
   

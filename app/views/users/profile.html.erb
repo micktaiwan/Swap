@@ -1,10 +1,19 @@
-<h1><%=I18n.t(:my_profile)%></h1>
+<h1><%=I18n.t(:profile)%></h1>
+<% if @user == current_user %>
 <%= link_to(I18n.t(:edit_my_profile), :action=>:edit) %><br/>
-<br/>
+<% end %>
 
 <%= render(:partial=>'detail', :object=>@user) %>
 
 <% if @user.location.to_s != '' %>
 <div class="location"><%=@user.location%></div>
 <%end%>
+
+<h1><%=I18n.t(:title_things)%></h1>
+<% if flash[:error] %>
+<%= flash[:error] %><br/>
+<%end%>
+<ul class="things">
+<%= render(:partial=>'things/thing', :collection=>@things) %>
+</ul>
 

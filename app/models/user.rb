@@ -60,7 +60,12 @@ class User < ActiveRecord::Base
   def email=(value)
     write_attribute :email, (value ? value.downcase : nil)
   end
+  
+  def short_name
+    self.name.split(" ")[0]
+  end
 
   protected
 
 end
+

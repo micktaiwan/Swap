@@ -23,7 +23,9 @@
 (<%=thing.percent_off%>% <%=I18n.t(:discount)%>)
 <% end %> 
 <br/>
-<div class="user"><%=thing.user.name%></div>
+<div class="user">
+<a href="/users/profile/<%=thing.user.id%>"><%=thing.user.short_name%></a>
+</div>
 <% if thing.user.location.to_s != '' %> (<%=thing.user.location%>)<%end%>
 
 <div class="add_as_friend">

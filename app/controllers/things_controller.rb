@@ -30,10 +30,6 @@ class ThingsController < ApplicationController
     @thing = Thing.find(params[:id])
   end
 
-  def my
-    @things = Thing.find(:all, :conditions=>["user_id=?", current_user.id], :order=>"id desc")
-  end
-  
   def update
     id = params[:id]
     @thing = Thing.find(id)

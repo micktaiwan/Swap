@@ -25,7 +25,13 @@ class UsersController < ApplicationController
   end
   
   def profile
-    @user = current_user
+    id = params[:id]
+    if not id
+      @user = current_user
+    else
+      @user = User.find(id)
+    end
+    @things = Thing.find(:all, :conditions=>["user_id=?", @user.id], :order=>"id desc")
   end
 
   def edit
