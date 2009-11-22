@@ -1,0 +1,8 @@
+<%= I18n.t(:pro,
+ :from=>"<a href='/users/profile/#{pro.user.id}'>#{pro.user.name}</a>",
+ :to=>"<a href='/users/profile/#{pro.owner.id}'>#{pro.owner.name}</a>",
+ :what=>"<a href='/things/show/#{pro.thing.id}'>#{pro.thing.name}</a>")%>
+
+<span class="time"><%= time_ago_in_words(pro.created_at) %></span>
+<br/>
+

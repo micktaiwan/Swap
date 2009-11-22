@@ -46,6 +46,7 @@ fr:
   do_proposition:     "Je suis intéressé"
   undo_proposition:   "Retirer ma proposition"
   title_propositions: "Propositions"
+  pro:                "{{from}} est intérressé par {{what}} de {{to}}"
 
     
 # profile
