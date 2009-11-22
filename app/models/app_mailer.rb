@@ -21,6 +21,27 @@ class AppMailer < ActionMailer::Base
     @headers    = {}
     content_type "text/html"
   end
+
+  def proposition(p)
+    @subject    = "[Swap!] Proposition from #{p.user.name}"
+    @body["p"] = p
+    @recipients = p.owner.email
+    @from       = p.user.email
+    @sent_on    = Time.now
+    @headers    = {}
+    content_type "text/html"
+  end
+
+  def cancel_proposition(p)
+    @subject    = "[Swap!] Canceling proposition from #{p.user.name}"
+    @body["p"] = p
+    @recipients = p.owner.email
+    @from       = p.user.email
+    @sent_on    = Time.now
+    @headers    = {}
+    content_type "text/html"
+  end
+
   
 end
 
