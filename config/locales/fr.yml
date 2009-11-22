@@ -40,6 +40,13 @@ fr:
   things:             "trucs"
   title_things:       "Trucs"
   estimated_price_explaination: "La valeur que vous lui donnez (si vous deviez le vendre)"
+
+# Propositions
+
+  do_proposition:     "Je suis intéressé"
+  undo_proposition:   "Retirer ma proposition"
+  title_propositions: "Propositions"
+
     
 # profile
 

@@ -20,6 +20,21 @@
 (<%=@thing.percent_off%>% <%=I18n.t(:discount)%>)<br/>
 <% end %> 
 <br/>
+
+
+<% if not current_user.has_proposed?(@thing.id) %>
+<%= link_to(I18n.t(:do_proposition), {:controller=>'propositions', :action=>'create', :id=>@thing.id}, {:class=>"btnlnk"}) %><br/>
+<% else %> 
+<%= link_to(I18n.t(:undo_proposition), {:controller=>'propositions', :action=>'destroy_by_thing', :id=>@thing.id}, {:class=>"btnlnk warning"}) %><br/>
+<% end %> 
+<br/>
+
+<% if @propositions %>
+<b><%=I18n.t(:title_propositions)%></b><br/>
+<%= render(:partial=>'propositions/list', :collection=>@propositions) %>
+<br/>
+<% end %>
+
 <b><%=I18n.t(:owner)%></b><br/>
 <%= render(:partial=>'users/detail', :object=>@thing.user) %>
 <br/>

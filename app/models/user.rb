@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   include Authentication::ByCookieToken
   
   has_many :things
+  has_many :propositions
   #has_many :networks
   #has_many :friends, :through=>:networks, :foreign_key=>:friend_id, :class_name=>'User' #, :select => "memberships.active, projects.*"
 
@@ -25,6 +26,10 @@ class User < ActiveRecord::Base
     Network.find_by_sql("select * from networks where user_id='#{self.id}' and friend_id='#{user_id}'") == [] ? false : true
   end
   
+  def has_proposed?(thing_id)
+    self.propositions.collect { |p| p.thing_id}.include?(thing_id)
+  end  
+
 
   #validates_presence_of     :login
   #validates_length_of       :login,    :within => 3..40

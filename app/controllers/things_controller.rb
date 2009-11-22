@@ -63,7 +63,9 @@ class ThingsController < ApplicationController
   end
   
   def show
-    @thing = Thing.find(params[:id])
+    id            = params[:id]
+    @thing        = Thing.find(id)
+    @propositions = Proposition.find(:all, :conditions=>["thing_id=?", id])
   end
 
 private

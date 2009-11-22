@@ -23,6 +23,14 @@ input, textarea { border: 1px solid #999; }
   background:  #AFA;
   padding: 0 2px 0 2px;
   }  
+
+.warning {
+  background:  #F55;
+  border: 1px solid #900;
+  color: white;
+  }  
+
+
 .friend {
   display: inline-block;
   margin:20px;
@@ -73,7 +81,7 @@ input, textarea { border: 1px solid #999; }
   font-weight: bold;
 }
 .thing .user a {
-  color:#55D;
+  color:#55Db;
   }
 
 .name a {
