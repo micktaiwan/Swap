@@ -17,6 +17,15 @@ None
 <% end %>
 <br/>
 
+<h1><%=I18n.t(:title_things)%></h1>
+<% if flash[:error] %>
+<%= flash[:error] %><br/>
+<%end%>
+<ul class="things">
+<%= render(:partial=>'things/thing', :collection=>@things) %>
+</ul>
+
+
 <h1><%= I18n.t(:network) %></h1>
 
 <% if current_user == @user %>
@@ -40,12 +49,4 @@ None
 <%= I18n.t(:none) %><br/>
 <br/>
 <% end %>
-
-<h1><%=I18n.t(:title_things)%></h1>
-<% if flash[:error] %>
-<%= flash[:error] %><br/>
-<%end%>
-<ul class="things">
-<%= render(:partial=>'things/thing', :collection=>@things) %>
-</ul>
 

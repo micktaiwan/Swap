@@ -16,7 +16,7 @@ class ThingsController < ApplicationController
     if @thing.save
       if params[:thing][:photo].blank?
         flash[:notice] = I18n.t(:created_msg)
-        redirect_to('/things/my')
+        redirect_to('/users/profile')
       else
         render :action => "crop"
       end
