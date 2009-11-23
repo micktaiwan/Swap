@@ -31,6 +31,8 @@ class UsersController < ApplicationController
     else
       @user = User.find(id)
     end
+    @friends = @user.friends
+    @fans    = @user.fans
     @things = Thing.find(:all, :conditions=>["user_id=?", @user.id], :order=>"id desc")
     @pros = Proposition.find(:all, :conditions=>["user_id=? or owner_id=?",@user.id, @user.id])
   end

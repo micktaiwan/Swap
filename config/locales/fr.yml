@@ -71,6 +71,7 @@ fr:
   add_as_friend:      "Ajouter comme ami"
   remove_friend:      "Retirer cet ami"
   already_your_friend: "{{name}} est déjà votre ami ({{name_in_db}})"
+  none:               "Aucun"
   
       
   activerecord:

@@ -70,7 +70,8 @@ en:
   add_as_friend:      "Add as friend"
   remove_friend:      "Remove this friend"
   already_your_friend: "{{name}} is already your friend ({{name_in_db}})"
-    
+  none:               "None"
+      
   activerecord:
     errors:
       models:

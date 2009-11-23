@@ -17,6 +17,30 @@ None
 <% end %>
 <br/>
 
+<h1><%= I18n.t(:network) %></h1>
+
+<% if current_user == @user %>
+<%= render(:partial=>'network/new') %>
+<br/>
+<% end %>
+
+
+<h2><%= I18n.t(:friends) %></h2>
+<%= render(:partial=>'users/detail', :collection=>@friends) %>
+
+<% if @friends==[] %>
+<%= I18n.t(:none) %><br/>
+<br/>
+<% end %>
+
+<h2><%= I18n.t(:fans) %></h2>
+<%= render(:partial=>'users/detail', :collection=>@fans) %>
+
+<% if @fans==[] %>
+<%= I18n.t(:none) %><br/>
+<br/>
+<% end %>
+
 <h1><%=I18n.t(:title_things)%></h1>
 <% if flash[:error] %>
 <%= flash[:error] %><br/>
