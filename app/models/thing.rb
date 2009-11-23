@@ -1,7 +1,8 @@
 class Thing < ActiveRecord::Base
 
   belongs_to :user
-  has_many :messages
+  has_many :messages, :dependent=>:destroy
+  has_many :propositions, :dependent=>:destroy
   has_many :commentators, :through=>:messages, :select => "DISTINCT users.*" #:uniq => true
   
   has_attached_file :photo, :styles => { :small => "100x100#", :large => "500x500>" }, :processors => [:cropper]

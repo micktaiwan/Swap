@@ -59,7 +59,7 @@ class ThingsController < ApplicationController
     if not Thing.destroy(id)
       flash[:error] = I18n.t(:error)
     end
-    redirect_to "/things/my"
+    redirect_to "/users/profile"
   end
   
   def show
