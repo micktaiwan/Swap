@@ -13,7 +13,7 @@ class MessagesController < ApplicationController
     if @message.save
       flash[:notice] = I18n.t(:created_msg)
       thing = Thing.find(params[:thing_id])
-      AppMailer.deliver_message(@message, (thing.commentators.collect {|c| c.name_with_email} + [thing.user.name_with_email]).uniq )
+      AppMailer.deliver_message(@message, thing.get_all_emails )
       redirect_to("/things/show/#{@message.thing_id}")
     else
       render :action => 'new'

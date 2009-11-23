@@ -26,6 +26,11 @@ class Thing < ActiveRecord::Base
     @geometry ||= {}
     @geometry[style] ||= Paperclip::Geometry.from_file(photo.path(style))
   end
+
+  def get_all_emails
+    (self.commentators.collect {|c| c.name_with_email} + [self.user.name_with_email]).uniq
+  end  
+
   
 private
   
