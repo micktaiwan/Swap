@@ -69,6 +69,10 @@ class User < ActiveRecord::Base
   def short_name
     self.name.split(" ")[0]
   end
+  
+  def name_with_email
+    "#{self.name} <#{self.email}>"
+  end
 
   protected
 

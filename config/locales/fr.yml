@@ -56,6 +56,7 @@ fr:
   profile:            "Profil"
   edit_my_profile:    "Editer"
   location:           "Ville, Pays"
+  last_login_date:    "S'est loggué il y a {{time}}"
   
 # messages
 

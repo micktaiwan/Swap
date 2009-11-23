@@ -55,6 +55,7 @@ en:
   profile:            "Profile"
   edit_my_profile:    "Edit"
   location:           "Town, Country"
+  last_login_date:    "Last loggued {{time}} ago"
 
 # messages
 

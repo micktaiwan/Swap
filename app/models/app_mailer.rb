@@ -42,6 +42,15 @@ class AppMailer < ActionMailer::Base
     content_type "text/html"
   end
 
+  def message(m, recipients)
+    @subject    = "[Swap!] Message from #{m.user.name}"
+    @body["m"] = m
+    @recipients = recipients
+    @from       = m.user.email
+    @sent_on    = Time.now
+    @headers    = {}
+    content_type "text/html"
+  end
   
 end
 

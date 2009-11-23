@@ -4,11 +4,16 @@
 <% end %>
 
 <%= render(:partial=>'detail', :object=>@user) %>
+<br/>
 
 <% if @user.location.to_s != '' %>
 <div class="location"><%=@user.location%></div>
-<br/>
 <%end%>
+
+<% if @user.last_login %>
+<%= I18n.t(:last_login_date, :time=>time_ago_in_words(@user.last_login)) %><br/>
+<% end %>
+<br/>
 
 <h1><%=I18n.t(:title_propositions)%></h1>
 <%= render(:partial=>'propositions/pro', :collection=>@pros) %>

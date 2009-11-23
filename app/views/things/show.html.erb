@@ -11,8 +11,8 @@
 <br/>
 <% end %>
 
-<%=@thing.description%><br/>
-<%=@thing.swap_reason%><br/>
+<%= simple_format(@thing.description)%>
+<%= simple_format(@thing.swap_reason)%>
 <br/>
 <%=I18n.t(:value)%>: <%=@thing.estimated_price.to_i%><br/>
 <% if @thing.buying_price.to_i != 0 %> 
