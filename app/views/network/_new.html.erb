@@ -1,6 +1,6 @@
 <h2><%=I18n.t(:invite_friend)%></h2>
 
-<% form_for :@friend, :url=>{:action=>'create'}, :html=>{:id=>"new_friend"} do |f| -%>
+<% form_for :@friend, :url=>{:controller=>'network', :action=>'create'}, :html=>{:id=>"new_friend"} do |f| -%>
 
 <p><%= label_tag I18n.t(:name) %>
 <%= text_field :friend, :name %></p>
