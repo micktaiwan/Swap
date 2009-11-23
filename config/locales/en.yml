@@ -40,6 +40,7 @@ en:
   things:             "things"
   title_things:       "Things"
   estimated_price_explaination: "The value you put on it (if you had to sell it)"
+  added_ago:          "Added {{time}} ago"
 
 # Propositions
 

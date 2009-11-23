@@ -7,6 +7,9 @@
 <% end %>
 
 <div class="name"><%=thing.name%></div>
+
+<%= I18n.t(:added_ago, :time=>time_ago_in_words(thing.created_at))%>
+
 <%= link_to(I18n.t(:show_detail), {:controller=>'things', :action=>'show', :id=>thing.id}) %> | 
 <%= thing.messages.size %> <%= I18n.t(:nb_messages) %>
 
@@ -16,6 +19,7 @@
 <% end %>
 
 <br/>
+
 <%=thing.description%><br/>
 <%=thing.swap_reason%><br/>
 <%=I18n.t(:value)%>: <%=thing.estimated_price%>
