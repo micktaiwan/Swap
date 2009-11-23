@@ -13,7 +13,7 @@
 <h1><%=I18n.t(:title_propositions)%></h1>
 <%= render(:partial=>'propositions/pro', :collection=>@pros) %>
 <% if @pros == [] %>
-None
+<%=I18n.t(:no_proposition)%><br/>
 <% end %>
 <br/>
 

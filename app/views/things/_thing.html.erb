@@ -1,10 +1,12 @@
 <li class="thing<% if current_user and thing.user_id == current_user.id %> mine<% end %>">
 
+<a href="/things/show/<%=thing.id%>">
 <% if not thing.photo_file_name %>
 <img src="/images/no_image.png" width="100" height="100">
 <% else %>
 <%= image_tag thing.photo.url(:small) %>  
 <% end %>
+</a>
 
 <div class="name"><%=thing.name%></div>
 

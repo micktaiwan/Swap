@@ -1,5 +1,7 @@
 class PropositionsController < ApplicationController
 
+  before_filter :verify_session
+
   def create
     thing = Thing.find(params[:id])
     p = Proposition.create(:thing_id=>thing.id, :user_id=>current_user.id, :owner_id=>thing.user_id)

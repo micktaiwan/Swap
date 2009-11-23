@@ -1,5 +1,6 @@
 body      { font-family: sans; padding: 0px; margin: 0px; }
 #title    { background: #BCE; font-size: 3em; letter-spacing: -6px; padding: 0 0 0 10px; }
+#title a  { color: black }
 #menu     { padding: 3px 3px 3px 10px; margin: 0; background: #8AF; }
 #content  { padding: 0px 0 0 10px; }
 h1        { background: #F90; font-size: 1.2em; padding: 3px; margin: 0 0 0 -10px; padding: 0 0 0 10px; }
@@ -29,7 +30,6 @@ input, textarea { border: 1px solid #999; }
   border: 1px solid #900;
   color: white;
   }  
-
 
 .friend {
   display: inline-block;

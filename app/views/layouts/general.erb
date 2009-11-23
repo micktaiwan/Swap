@@ -12,7 +12,7 @@
   <%= javascript_include_merged :base %>
 </head>
 <body>
-<div id="title">Swap!</div>
+<div id="title"><a href="/">Swap!</a></div>
 <div id="menu">
 <% if current_user %>
 <%= link_to(I18n.t(:all_things), :controller=>:things, :action=>:all)%> | 

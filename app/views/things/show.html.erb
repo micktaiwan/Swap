@@ -1,4 +1,4 @@
-<h2><%=@thing.name%></h2>
+<h1><%=@thing.name%></h1>
 
 <% if @thing.photo_file_name %>
 <%= link_to(image_tag(@thing.photo.url(:small), :class=>"thing_img"), "") %><br/>
@@ -21,7 +21,7 @@
 <% end %> 
 <br/>
 
-<% if current_user.id != @thing.user_id %>
+<% if current_user and current_user.id != @thing.user_id %>
 <% if not current_user.has_proposed?(@thing.id) %>
 <%= link_to(I18n.t(:do_proposition), {:controller=>'propositions', :action=>'create', :id=>@thing.id}, {:class=>"btnlnk"}) %><br/>
 <% else %> 
@@ -31,12 +31,12 @@
 <% end %> 
 
 <% if @propositions != [] %>
-<b><%=I18n.t(:title_propositions)%></b><br/>
+<h2><%=I18n.t(:title_propositions)%></h2>
 <%= render(:partial=>'propositions/list', :collection=>@propositions) %>
 <br/>
 <% end %>
 
-<b><%=I18n.t(:owner)%></b><br/>
+<h2><%=I18n.t(:owner)%></h2><br/>
 <%= render(:partial=>'users/detail', :object=>@thing.user) %>
 <br/>
 

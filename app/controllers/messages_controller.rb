@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
 
+  before_filter :verify_session
+
   def new
     @id = params[:id]
   end

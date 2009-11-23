@@ -1,6 +1,6 @@
 class ThingsController < ApplicationController
 
-  before_filter :verify_session, :except=>[:index, :all]
+  before_filter :verify_session, :except=>[:index, :all, :show]
 
   def new
   end

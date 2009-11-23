@@ -49,7 +49,7 @@ fr:
   undo_proposition:   "Retirer ma proposition"
   title_propositions: "Propositions"
   pro:                "{{from}} est intérressé par {{what}} de {{to}}"
-
+  no_proposition:     "Aucune"
     
 # profile
 
