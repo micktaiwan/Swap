@@ -13,6 +13,7 @@ en:
   password_confirmation: "Confirmation"
   log_in:             "Log In"
   remember_me:        "Remember me"
+  forgot_pwd:         "I forgot !"
 
 # menus
   add_thing:          "Add an thing to swap"

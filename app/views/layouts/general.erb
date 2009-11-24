@@ -28,7 +28,8 @@
 </div>
 <div id="content">
 <% if not current_user %>
-<p><%=I18n.t(:welcome)%></p>
+<br/>
+<%=I18n.t(:welcome)%><br/>
 <% end %>
 <%= yield %>
 </div>

@@ -5,7 +5,9 @@
 <%= text_field_tag 'email', @login %></p>
 
 <p><%= label_tag I18n.t(:password) %>:
-<%= password_field_tag 'password', nil %></p>
+<%= password_field_tag 'password', nil %>
+<%= link_to(I18n.t(:forgot_pwd), :controller=>'passwords', :action=>'new') %>
+</p>
 
 <p><label>&nbsp;</label>
 <%= check_box_tag 'remember_me', '1', @remember_me %> <%=I18n.t(:remember_me)%></p>
@@ -15,5 +17,5 @@
 <% end -%>
 <% if flash[:error] %>
 <%= flash[:error] %><br/>
-<%end%>
+<% end %>
 

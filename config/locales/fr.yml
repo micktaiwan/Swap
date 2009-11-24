@@ -13,6 +13,7 @@ fr:
   password_confirmation: "Confirmation"
   log_in:             "Signer"
   remember_me:        "Se souvenir"
+  forgot_pwd:         "J'ai oublié !"
 
 # menus
   add_thing:          "Ajouter un truc"
